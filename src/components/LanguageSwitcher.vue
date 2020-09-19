@@ -37,6 +37,12 @@ export default Vue.extend({
 .language-switcher {
   text-align: center;
 
+  @media (max-width: 840px) {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+  }
+
   .language-icon {
     margin-left: 10px;
     cursor: pointer;
@@ -44,36 +50,40 @@ export default Vue.extend({
     &:hover {
       transform: scale(1.1);
     }
+
+    @media (max-width: 840px) {
+      margin-left: 0;
+    }
   }
 }
 
 .language-icon {
   width:44px;
-  height:30px;
+  height: 30px;
   border-radius: 50%;
-  display:inline-block;
-  background:url(../assets/flags_responsive.png) no-repeat;
+  display: inline-block;
+  background: url(../assets/flags_responsive.png) no-repeat;
   background-size:100%;
   box-shadow: 0 2px 2px black;
 }
 
 .language-icon--en {
-  background-position:0 92.561983%;
+  background-position: 0 92.561983%;
 }
 
 .language-icon--de {
-  background-position:0 22.31405%;
+  background-position: 0 22.31405%;
 }
 
 .language-icon--fr {
-  background-position:0 29.752066%;
+  background-position: 0 29.752066%;
 }
 
 .language-icon--ru {
-  background-position:0 75.206612%;
+  background-position: 0 75.206612%;
 }
 
 .language-icon--cn {
-  background-position:0 19.005%;
+  background-position: 0 19.005%;
 }
 </style>
