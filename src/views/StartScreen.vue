@@ -1,21 +1,27 @@
 <template>
-  <div class="start-screen">
-    <div v-i18n class="start-screen-links">
-      <div class="start-screen-header start-screen-link--title">
-        <div class="start-screen-title-top">TERRAFORMING</div>
-        <div class="start-screen-title-bottom">MARS</div>
-      </div>
+  <div class="main-container">
+    <div class="start-screen">
+      <div v-i18n class="start-screen-links">
+        <div class="start-screen-header start-screen-link--title">
+          <div class="start-screen-title-top">
+            <span>TERRAFORMING</span>
+          </div>
+          <div class="start-screen-title-bottom">
+            <span>MARS</span>
+          </div>
+        </div>
 
-      <a class="start-screen-link start-screen-link--new-game" href="/new-game" v-i18n>New game</a>
-      <a class="start-screen-link start-screen-link--solo" href="/solo" v-i18n>Solo challenge</a>
-      <a class="start-screen-link start-screen-link--cards-list" href="https://ssimeonoff.github.io/cards-list" v-i18n>Cards list</a>
-      <a class="start-screen-link start-screen-link--board-game" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" v-i18n>Board game</a>
-      <a class="start-screen-link start-screen-link--about" href="https://github.com/bafolts/terraforming-mars" v-i18n>About us</a>
-      <a class="start-screen-link start-screen-link--changelog" href="https://github.com/bafolts/terraforming-mars/wiki/Changelog" v-i18n>Whats new?</a>
-      <a class="start-screen-link start-screen-link--chat" href="https://discord.gg/fWXE53K" target="_blank" rel="noopener noreferrer" v-i18n>Join us on Discord</a>
+        <a class="start-screen-link start-screen-link--new-game" href="/new-game" v-i18n>New game</a>
+        <a class="start-screen-link start-screen-link--solo" href="/solo" v-i18n>Solo challenge</a>
+        <a class="start-screen-link start-screen-link--cards-list" href="https://ssimeonoff.github.io/cards-list" v-i18n>Cards list</a>
+        <a class="start-screen-link start-screen-link--board-game" href="https://boardgamegeek.com/boardgame/167791/terraforming-mars" v-i18n>Board game</a>
+        <a class="start-screen-link start-screen-link--about" href="https://github.com/bafolts/terraforming-mars" v-i18n>About us</a>
+        <a class="start-screen-link start-screen-link--changelog" href="https://github.com/bafolts/terraforming-mars/wiki/Changelog" v-i18n>Whats new?</a>
+        <a class="start-screen-link start-screen-link--chat" href="https://discord.gg/fWXE53K" target="_blank" rel="noopener noreferrer" v-i18n>Join us on Discord</a>
 
-      <div class="start-screen-header start-screen-link--languages">
-        <LanguageSwitcher/>
+        <div class="start-screen-header start-screen-link--languages">
+          <LanguageSwitcher/>
+        </div>
       </div>
     </div>
   </div>
@@ -44,9 +50,21 @@ export default Vue.extend({
 </style>
 
 <style lang="less" scoped>
+.main-container {
+  @media (max-width: 600px) {
+    margin: 0;
+  }
+}
+
 .start-screen {
   width: 400px;
   margin: 0 auto;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .start-screen-game-title {
@@ -65,6 +83,10 @@ export default Vue.extend({
   margin: 0 auto;
   width: 370px;
   padding-top: 50px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .start-screen-link {
@@ -87,6 +109,14 @@ export default Vue.extend({
   letter-spacing: 1px;
   padding-bottom: 15px;
   flex-direction: column-reverse;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 12px;
+  }
 
   &:hover, &:visited, &:active, &:focus {
     color: #eee;
@@ -111,23 +141,42 @@ export default Vue.extend({
   margin-bottom: 5px;
   margin-left: 5px;
   text-shadow: 0 0 2px black, 0 2px 2px black;
-  letter-spacing: 1px
+  letter-spacing: 1px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
 }
 
 .start-screen-title-top {
-  transform: scaleX(2);
-  margin-left: 162px;
+  text-align: center;
   padding-top: 15px;
+
+  span {
+    transform: scaleX(2);
+    display: inline-block;
+  }
 }
 
 .start-screen-title-bottom {
-  transform: scaleX(2);
-  font-size: 30px;
-  margin-left: 190px;
+  text-align: center;
+
+  span {
+    transform: scaleX(2);
+    display: inline-block;
+    font-size: 30px;
+  }
 }
 
 .start-screen-link--title {
   background-image: url(../assets/planet1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .start-screen-link--new-game {

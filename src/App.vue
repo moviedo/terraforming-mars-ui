@@ -1,8 +1,6 @@
 <template>
   <div id="app" :class="classObject">
-    <div class="main-container">
-      <router-view/>
-    </div>
+    <router-view/>
   </div>
 </template>
 
