@@ -10,6 +10,11 @@ const routes: Array<RouteConfig> = [
     name: 'Home',
     component: StartScreen,
   },
+  {
+    path: '/solo',
+    name: 'solo',
+    component: () => import(/* webpackChunkName: "sologameform" */ '../views/SoloGameForm.vue'),
+  },
 ];
 
 const router = new VueRouter({
