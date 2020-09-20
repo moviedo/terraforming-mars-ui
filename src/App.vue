@@ -101,4 +101,35 @@ input[type=radio]:checked + label {
   color: #5755d9;
   cursor: pointer;
 }
+
+.board-cube {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  z-index: 3;
+  margin: 25px 0 0 15px;
+}
+
+.board-cube--red {
+  background: url(./assets/board_icons.png) -24px -91px no-repeat;
+}
+
+.board-cube--blue {
+  background: url(./assets/board_icons.png) -94px -91px no-repeat;
+}
+
+.board-cube--black {
+  background: url(./assets/board_icons.png) -48px -91px no-repeat;
+}
+
+.board-cube--yellow {
+  background: url(./assets/board_icons.png) -72px -91px no-repeat;
+}
+
+.board-cube--green {
+  background: url(./assets/board_icons.png) -1px -91px no-repeat;
+}
+.board-cube--purple {
+  background: url(./assets/board_icons.png) -118px -91px no-repeat;
+}
 </style>
